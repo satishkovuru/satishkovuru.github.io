@@ -5,7 +5,7 @@ export const projects = [
     description:
       'This site — a React + Vite portfolio built to present my background, skills, and résumé, deployed automatically to GitHub Pages.',
     tags: ['React', 'Vite', 'GitHub Actions'],
-    link: 'https://github.com/satishkumar9549/satishkumar9549.github.io',
+    link: 'https://github.com/SatishKovuru/satishkovuru.github.io',
     linkLabel: 'View Source',
   },
   {

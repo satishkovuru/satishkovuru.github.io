@@ -7,8 +7,8 @@ export const profile = {
     "I build reliable full-stack applications and enjoy turning data into decisions.",
   location: 'DeKalb, IL, USA',
   email: 'skkumar9549@gmail.com',
-  github: 'https://github.com/satishkumar9549',
-  linkedin: 'https://www.linkedin.com/in/satishkumar9549',
+  github: 'https://github.com/SatishKovuru',
+  linkedin: 'https://www.linkedin.com/in/SatishKovuru',
   resumeFile: '/resume.pdf',
   about: [
     "I'm a Master's graduate in Management Information Systems from Northern Illinois University, DeKalb, with a background in backend software engineering and application maintenance using Java/J2EE technologies in Agile and Scrum environments.",

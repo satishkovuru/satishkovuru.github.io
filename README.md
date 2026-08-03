@@ -1,4 +1,4 @@
-# satishkumar9549.github.io
+# satishkovuru.github.io
 
 Personal portfolio website built with React + Vite, showcasing my background, résumé, skills, and projects. Deployed automatically to GitHub Pages.
 
