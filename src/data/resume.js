@@ -19,47 +19,9 @@ export const education = [
 export const achievements = [
   { value: '10+', label: 'Years of Experience' },
   { value: '5', label: 'Companies Led QA For' },
-  { value: 'Selenium → Playwright', label: 'Led Framework Migration' },
+  { value: '1,500+', label: 'Automated Test Scripts Built' },
   { value: '60%', label: 'Manual Testing Effort Reduced' },
   { value: '0', label: 'Critical Post-Production Defects' },
-];
-
-export const frameworks = [
-  {
-    company: 'LPL Financial',
-    title: 'Selenium + TestNG + Java → Playwright (TypeScript) migration',
-    description:
-      'Designed and maintain the core UI automation framework for advisor trading and wealth-management applications, then led its migration to Playwright/TypeScript across 500+ tests. Paired it with Postman/Rest Assured coverage for GraphQL and REST APIs, plus Appium (UiAutomator2) for advisor Android apps.',
-    tags: ['Selenium', 'Playwright', 'TestNG', 'TypeScript', 'GraphQL', 'Rest Assured', 'Appium'],
-  },
-  {
-    company: 'TransUnion',
-    title: 'Hybrid UI / Mobile / REST / SOAP framework, Robot Framework → Playwright',
-    description:
-      'Built a hybrid automation framework spanning Web UI, mobile, REST, and SOAP APIs using Serenity BDD, SpecFlow, Rest Assured, and RestSharp, then led the migration off Robot Framework to Playwright across 300+ test cases. Extended it with an in-house PORV tool for Shadow DOM locators to cover Salesforce Sales Cloud.',
-    tags: ['Serenity BDD', 'SpecFlow', 'Playwright', 'Rest Assured', 'RestSharp', 'Salesforce'],
-  },
-  {
-    company: 'Motorola Solutions Inc.',
-    title: 'Data-driven Selenium WebDriver framework (Apache POI)',
-    description:
-      'Built a data-driven Java/Selenium WebDriver framework using Apache POI to power functional, regression, and performance testing across Salesforce, Oracle Cloud CPQ, Oracle Commerce Cloud, and ecommerce storefront flows, plus SOAP/REST and Appium coverage for radio devices.',
-    tags: ['Selenium WebDriver', 'Apache POI', 'CPQ', 'Salesforce', 'Appium'],
-  },
-  {
-    company: 'Capgemini Financial Services',
-    title: 'Data-driven & hybrid framework with Cucumber BDD',
-    description:
-      'Developed and scaled 1,500+ automated test scripts using Java, Selenium WebDriver, and TestNG, then layered in Cucumber BDD across regression suites to cut release cycle time 20–25%. Covered UI, API, and performance testing via Rest Assured, SOAP UI, Postman, and JMeter, integrated into CI/CD.',
-    tags: ['Selenium WebDriver', 'TestNG', 'Cucumber BDD', 'JMeter', 'CI/CD'],
-  },
-  {
-    company: 'Accenture',
-    title: 'TestNG + Jenkins CI pipeline; Java/Spring MVC automation tool',
-    description:
-      'Automated 650+ UI/API test cases with Selenium WebDriver, Rest Assured, JUnit, and TestNG, then built TestNG/Jenkins CI pipelines running 200+ test executions per sprint. Designed a Java/Spring MVC test automation tool with structured Log4j logging that cut manual QA effort 70%.',
-    tags: ['Selenium WebDriver', 'TestNG', 'Jenkins', 'Spring MVC', 'Log4j'],
-  },
 ];
 
 export const experience = [
