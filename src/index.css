@@ -549,45 +549,6 @@ main {
   gap: 24px;
 }
 
-.frameworks-intro {
-  color: var(--text-muted);
-  margin-bottom: 24px;
-}
-
-.framework-list {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  max-width: 760px;
-}
-
-.framework-card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 24px;
-  box-shadow: var(--shadow);
-}
-
-.framework-company {
-  color: var(--accent);
-  font-weight: 700;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin: 0 0 6px;
-}
-
-.framework-card h4 {
-  margin: 0 0 10px;
-  font-size: 1.05rem;
-}
-
-.framework-description {
-  color: var(--text);
-  margin: 0 0 14px;
-}
-
 .skill-group h4 {
   font-size: 0.95rem;
   margin-bottom: 10px;
