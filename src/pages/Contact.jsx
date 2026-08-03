@@ -13,6 +13,12 @@ export default function Contact() {
           <span className="contact-label">Email</span>
           <span className="contact-value">{profile.email}</span>
         </a>
+        {profile.phone && (
+          <a className="contact-card" href={`tel:${profile.phone.replace(/[^0-9+]/g, '')}`}>
+            <span className="contact-label">Phone</span>
+            <span className="contact-value">{profile.phone}</span>
+          </a>
+        )}
         <a className="contact-card" href={profile.github} target="_blank" rel="noreferrer">
           <span className="contact-label">GitHub</span>
           <span className="contact-value">{profile.github.replace('https://', '')}</span>
