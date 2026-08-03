@@ -2,10 +2,11 @@ import { useMemo, useState } from 'react';
 import SectionHeading from '../components/SectionHeading.jsx';
 import ExperienceItem from '../components/ExperienceItem.jsx';
 import { profile } from '../data/profile.js';
-import { education, experience, skills, achievements, certifications } from '../data/resume.js';
+import { education, experience, skills, achievements, frameworks, certifications } from '../data/resume.js';
 
 const TABS = [
   { id: 'experience', label: 'Experience' },
+  { id: 'frameworks', label: 'Frameworks' },
   { id: 'education', label: 'Education' },
   { id: 'skills', label: 'Skills' },
 ];
@@ -63,6 +64,28 @@ export default function Resume() {
         {experience.map((job) => (
           <ExperienceItem key={`${job.company}-${job.role}`} job={job} />
         ))}
+      </div>
+
+      <div className={`tab-panel ${activeTab === 'frameworks' ? 'active' : ''}`}>
+        <p className="frameworks-intro">
+          What I actually built and led at each role — not just a count of tests.
+        </p>
+        <div className="framework-list">
+          {frameworks.map((fw) => (
+            <div key={fw.company} className="framework-card">
+              <p className="framework-company">{fw.company}</p>
+              <h4>{fw.title}</h4>
+              <p className="framework-description">{fw.description}</p>
+              <div className="skill-tags">
+                {fw.tags.map((tag) => (
+                  <span key={tag} className="tag">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
 
       <div className={`tab-panel resume-block ${activeTab === 'education' ? 'active' : ''}`}>
