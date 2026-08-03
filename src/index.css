@@ -351,15 +351,70 @@ main {
   gap: 12px;
 }
 
-.resume-grid {
+.metrics-strip {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 48px;
-  margin-top: 48px;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 16px;
+  margin: 48px 0 0;
+  padding: 28px 24px;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 12px;
 }
 
-.resume-block + .resume-block {
-  margin-top: 40px;
+.metric-card {
+  text-align: center;
+}
+
+.metric-card dt {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+.metric-card dd {
+  margin: 4px 0 0;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.resume-tabs {
+  display: flex;
+  gap: 4px;
+  margin: 40px 0 32px;
+  border-bottom: 1px solid var(--border);
+}
+
+.resume-tab {
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 10px 4px;
+  margin-right: 24px;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.resume-tab:hover {
+  color: var(--text);
+}
+
+.resume-tab.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+.resume-block {
+  max-width: 760px;
 }
 
 .resume-block h3 {
@@ -370,16 +425,43 @@ main {
   margin-bottom: 20px;
 }
 
-.resume-item + .resume-item {
-  margin-top: 24px;
+.resume-subheading {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  margin: 32px 0 16px;
+}
+
+.resume-item {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.resume-item:last-child {
+  border-bottom: none;
 }
 
 .resume-item-header {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
-  gap: 12px;
-  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.resume-item-header--clickable {
+  cursor: pointer;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.resume-item-header--clickable:hover h4 {
+  color: var(--accent);
+}
+
+.resume-item-header--clickable:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
 }
 
 .resume-item-header h4 {
@@ -391,17 +473,41 @@ main {
   color: var(--text-muted);
   font-size: 0.9rem;
   white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .resume-subtitle {
   color: var(--text-muted);
-  margin: 4px 0 8px;
+  margin: 4px 0 0;
   font-weight: 600;
 }
 
-.resume-item ul {
+.resume-summary {
+  color: var(--text);
+  margin: 10px 0 0;
+}
+
+.resume-chevron {
+  display: inline-block;
+  color: var(--text-muted);
+  transition: transform 0.2s ease;
+}
+
+.resume-chevron.open {
+  transform: rotate(180deg);
+}
+
+.resume-details {
+  display: none;
   padding-left: 20px;
   list-style: disc;
+  margin-top: 14px;
+}
+
+.resume-details.expanded {
+  display: block;
 }
 
 .resume-item li {
@@ -409,8 +515,38 @@ main {
   color: var(--text);
 }
 
-.skill-group + .skill-group {
-  margin-top: 20px;
+.skill-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.filter-chip {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.filter-chip:hover {
+  border-color: var(--accent);
+}
+
+.filter-chip.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-contrast);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
 }
 
 .skill-group h4 {
@@ -431,12 +567,6 @@ main {
   padding: 5px 12px;
   font-size: 0.8rem;
   font-weight: 600;
-}
-
-@media (max-width: 800px) {
-  .resume-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 /* Projects */
@@ -564,7 +694,24 @@ main {
 @media print {
   .navbar,
   .footer,
-  .resume-actions {
+  .resume-actions,
+  .resume-tabs,
+  .skill-filters,
+  .resume-chevron {
+    display: none !important;
+  }
+
+  .tab-panel {
+    display: block !important;
+    max-width: none;
+    margin-bottom: 32px;
+  }
+
+  .resume-details {
+    display: block !important;
+  }
+
+  .resume-summary {
     display: none !important;
   }
 }

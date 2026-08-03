@@ -16,12 +16,22 @@ export const education = [
   },
 ];
 
+export const achievements = [
+  { value: '10+', label: 'Years of Experience' },
+  { value: '5', label: 'Companies Led QA For' },
+  { value: '1,500+', label: 'Automated Test Scripts Built' },
+  { value: '60%', label: 'Manual Testing Effort Reduced' },
+  { value: '0', label: 'Critical Post-Production Defects' },
+];
+
 export const experience = [
   {
     company: 'LPL Financial',
     role: 'Lead Software Developer in Test',
     period: 'Jan 2024 – Present',
     location: 'Austin, TX',
+    summary:
+      'Leading QA automation strategy for advisor trading & wealth-management platforms — driving the Selenium→Playwright migration and AI-augmented testing workflows.',
     bullets: [
       'Define and execute test strategy and test plans for advisor trading and wealth-management applications — functional, regression, API, security, and release-gate testing.',
       'Achieve zero critical post-production defects on owned releases through rigorous release-gate and regression testing.',
@@ -41,6 +51,8 @@ export const experience = [
     role: 'Sr. Software Developer in Test',
     period: 'Mar 2020 – Dec 2023',
     location: 'Chicago, IL',
+    summary:
+      'Built a hybrid UI/API/mobile automation framework and led the Robot Framework → Playwright migration across credit and Salesforce platforms.',
     bullets: [
       'Designed a hybrid automation framework for Web UI, mobile, REST, and SOAP APIs using Serenity BDD, SpecFlow, Rest Assured, and RestSharp, increasing automation coverage by 30%.',
       'Led migration from Robot Framework to Playwright across 300+ test cases, reducing maintenance effort 30% and improving execution stability.',
@@ -55,6 +67,8 @@ export const experience = [
     role: 'SDET / CPQ Developer',
     period: 'Nov 2017 – Feb 2020',
     location: 'Schaumburg, IL',
+    summary:
+      'Built data-driven Selenium frameworks and owned CPQ/Salesforce/OCC test automation across ecommerce and radio-device platforms.',
     bullets: [
       'Developed a Java Selenium WebDriver data-driven framework with Apache POI, improving coverage and reducing turnaround time 30%.',
       'Performed SOAP and REST API testing and Appium mobile testing on Android and radio devices.',
@@ -69,6 +83,8 @@ export const experience = [
     role: 'Associate Consultant',
     period: 'Mar 2017 – Nov 2017',
     location: 'Chicago, IL',
+    summary:
+      'Built and scaled 1,500+ automated test scripts across UI, API, and performance testing for financial services clients.',
     bullets: [
       'Developed and executed 1,500+ automated test scripts using Java, Selenium WebDriver, and TestNG, increasing test coverage 35% and enabling early defect detection across regression suites.',
       'Automated UI, API, and performance testing using Rest Assured, SOAP UI, Postman, and JMeter, integrated into CI/CD pipelines.',
@@ -80,6 +96,8 @@ export const experience = [
     role: 'Software Engineering Analyst',
     period: 'Oct 2013 – Jul 2015',
     location: 'India',
+    summary:
+      'Automated 650+ UI/API test cases and built CI pipelines executing 200+ automated test runs per sprint.',
     bullets: [
       'Automated 650+ UI and API test cases using Selenium WebDriver, Rest Assured, Java, JUnit, and TestNG, reducing manual testing effort 35% across sprint-based regression cycles.',
       'Built TestNG and Jenkins CI pipelines automating 200+ test executions per sprint; validated backend data using SQL, stored procedures, and optimized queries for REST API test scenarios.',
