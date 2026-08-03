@@ -11,8 +11,8 @@ export const projects = [
   {
     title: 'Add Your Next Project',
     description:
-      'Replace this card with a real project: what problem it solved, the stack you used, and the impact it had.',
-    tags: ['Java', 'Spring', 'MySQL'],
+      'Replace this card with a real project: a framework you built, a migration you led, or an automation initiative — what problem it solved, the stack you used, and the impact it had.',
+    tags: ['Selenium', 'Playwright', 'TestNG'],
     link: '',
     linkLabel: 'View Project',
   },
@@ -20,7 +20,7 @@ export const projects = [
     title: 'Add Another Project',
     description:
       'Edit src/data/projects.js to add, remove, or reorder project cards shown on this page.',
-    tags: ['Data Analysis', 'Python'],
+    tags: ['GraphQL', 'Rest Assured', 'AI-Augmented Testing'],
     link: '',
     linkLabel: 'View Project',
   },
