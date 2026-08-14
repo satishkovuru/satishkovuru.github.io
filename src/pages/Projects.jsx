@@ -22,11 +22,18 @@ export default function Projects() {
                 </span>
               ))}
             </div>
-            {project.link && (
-              <a className="project-link" href={project.link} target="_blank" rel="noreferrer">
-                {project.linkLabel || 'View'} →
-              </a>
-            )}
+            <div className="project-links">
+              {project.demoLink && (
+                <a className="project-link" href={project.demoLink} target="_blank" rel="noreferrer">
+                  {project.demoLabel || 'View Notebook'} →
+                </a>
+              )}
+              {project.link && (
+                <a className="project-link" href={project.link} target="_blank" rel="noreferrer">
+                  {project.linkLabel || 'View'} →
+                </a>
+              )}
+            </div>
           </article>
         ))}
       </div>
