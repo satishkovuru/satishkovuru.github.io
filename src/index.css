@@ -620,6 +620,15 @@ main {
   flex: 1;
 }
 
+.project-card p.project-meta {
+  flex: 0 0 auto;
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
 .project-link {
   font-weight: 600;
 }
