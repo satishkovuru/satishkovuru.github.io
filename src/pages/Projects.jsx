@@ -13,6 +13,7 @@ export default function Projects() {
         {projects.map((project) => (
           <article key={project.title} className="project-card">
             <h3>{project.title}</h3>
+            {project.meta && <p className="project-meta">{project.meta}</p>}
             <p>{project.description}</p>
             <div className="skill-tags">
               {project.tags.map((tag) => (
