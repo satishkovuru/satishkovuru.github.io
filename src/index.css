@@ -629,6 +629,12 @@ main {
   letter-spacing: 0.04em;
 }
 
+.project-links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
 .project-link {
   font-weight: 600;
 }
