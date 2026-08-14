@@ -1,6 +1,13 @@
 // Edit this file to keep your résumé content in sync with the Resume page.
 export const education = [
   {
+    school: 'The University of Texas at Austin — McCombs School of Business',
+    location: 'Austin, TX',
+    degree: 'Post Graduate Program in Artificial Intelligence and Machine Learning: Business Applications',
+    period: 'In Progress',
+    details: [],
+  },
+  {
     school: 'Northern Illinois University',
     location: 'DeKalb, IL',
     degree: 'MS, Management Information Systems — GPA 3.53',
