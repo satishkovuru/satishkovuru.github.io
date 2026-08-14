@@ -338,6 +338,28 @@ main {
   color: var(--text);
 }
 
+.about-block {
+  margin-top: 32px;
+}
+
+.about-block h3 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.about-list {
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.about-list li {
+  margin-bottom: 8px;
+  color: var(--text);
+}
+
 /* Resume */
 .resume-header {
   display: flex;
