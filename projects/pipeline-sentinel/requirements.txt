@@ -1,0 +1,5 @@
+pandas>=2.2
+scikit-learn>=1.5
+requests>=2.32
+streamlit>=1.38
+python-dateutil>=2.9
