@@ -12,6 +12,15 @@ export const projects = [
     linkLabel: 'View Source',
   },
   {
+    title: 'PipelineSentinel — CI/CD Anomaly Detection',
+    meta: 'Independent project — in progress',
+    description:
+      'A lightweight anomaly-detection layer for CI/CD pipelines: pulls run metadata from the GitHub Actions API, scores runs with an IsolationForest over duration, failure rate, and retries, and surfaces flagged runs with the reason in a Streamlit dashboard — built to cut manual pipeline triage time.',
+    tags: ['Anomaly Detection', 'scikit-learn', 'Isolation Forest', 'Streamlit', 'CI/CD'],
+    link: `${REPO}/pipeline-sentinel`,
+    linkLabel: 'View Source',
+  },
+  {
     title: 'SuperKart — Sales Forecasting & Model Deployment',
     meta: 'Great Learning — Model Deployment · Jul 2026',
     description:
