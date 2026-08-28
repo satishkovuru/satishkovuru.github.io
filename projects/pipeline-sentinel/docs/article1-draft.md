@@ -74,24 +74,40 @@ ordinary single-attempt successful runs were left alone. That's a
 correct-looking result, and it's real proof the ingestion → model →
 dashboard path works mechanically.
 
-But I'm not going to oversell it. Two limitations I want to be upfront
-about:
+But I'm not going to oversell it. **12 runs is not a validation set.**
+IsolationForest's `contamination` parameter tells it what *fraction* of runs
+to flag — at n=12, it's effectively forcing the most-extreme ~20% to be
+flagged, whether or not they're truly anomalous. It happened to land on
+exactly the right runs here, which is a good sign but not proof the model
+discriminates well on its own.
 
-1. **12 runs is not a validation set.** IsolationForest's `contamination`
-   parameter tells it what *fraction* of runs to flag — at this sample size,
-   it's effectively forcing the most-extreme ~20% to be flagged, whether or
-   not they're truly anomalous. It happened to land on exactly the right
-   runs here, which is a good sign but not proof the model discriminates
-   well. A perfectly healthy pipeline with zero real problems would still
-   get roughly a fifth of its runs flagged under the same settings.
-2. **No false-positive rate yet, because there's no larger dataset to
-   measure one against.** That number — along with real time-saved and
-   time-to-detection figures — only means something once this runs against
-   a real team's pipeline history over weeks, not a dozen runs from a
-   portfolio site's deploy workflow.
+So I built a second check: a labeled synthetic dataset — 400 simulated runs
+with ground-truth anomaly labels across four patterns (normal runs, a
+recurring flaky test that self-heals on retry, infra duration spikes, and
+genuine first-attempt regressions) — specifically so I could measure real
+precision and recall instead of eyeballing 12 rows. Sweeping `contamination`
+against those labels:
 
-So: the mechanism works. The model hasn't been validated at any meaningful
-scale yet. That's next.
+| contamination | precision | recall | false-positive rate |
+|---|---|---|---|
+| 0.05 | 1.000 | 0.556 | 0.000 |
+| 0.09 (true rate) | 0.972 | 0.972 | 0.003 |
+| 0.15 | 0.600 | 1.000 | 0.066 |
+| 0.20 | 0.450 | 1.000 | 0.121 |
+
+The pattern is exactly what theory predicts: set `contamination` too low and
+the model gets conservative and misses real anomalies; set it too high and
+precision collapses under false positives. The useful number is near the
+true anomaly rate — 97% precision and 97% recall at `contamination=0.09` on
+this synthetic set.
+
+To be clear about what that number is and isn't: it validates that the
+*model* behaves sensibly and that `contamination` tuning matters — a real
+methodology result. It is not a claim about real-world accuracy, because
+synthetic data by construction has patterns cleaner than a messy real
+pipeline. The real false-positive rate, and the real time-saved number,
+still only come from running this against an actual team's pipeline over
+weeks.
 
 ## What's next
 

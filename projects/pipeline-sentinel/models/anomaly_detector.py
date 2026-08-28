@@ -45,7 +45,17 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--in", dest="input_path", required=True)
     parser.add_argument("--out", dest="output_path", required=True)
-    parser.add_argument("--contamination", type=float, default=0.05)
+    parser.add_argument(
+        "--contamination",
+        type=float,
+        default=0.09,
+        help=(
+            "Expected fraction of anomalous runs. Sets a hard flag rate, so it "
+            "should be tuned against your own pipeline's real anomaly rate, not "
+            "left at the default. See tests/evaluate_synthetic.py for how the "
+            "0.09 default was chosen and to re-tune it against labeled data."
+        ),
+    )
     args = parser.parse_args()
 
     df = pd.read_csv(args.input_path, parse_dates=["created_at", "updated_at"])

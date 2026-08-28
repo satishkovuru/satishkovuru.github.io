@@ -33,6 +33,16 @@ contributing signals — in a lightweight dashboard.
 Python 3.11+, `scikit-learn` (IsolationForest), `pandas`, the GitHub Actions
 REST API, and `streamlit` for the dashboard.
 
+## Model validation
+
+`tests/evaluate_synthetic.py` measures precision/recall/false-positive rate
+against `data/generate_synthetic.py` — a labeled synthetic dataset (real CI
+history wasn't yet available at meaningful scale) used to tune the
+`contamination` parameter. At `contamination=0.09` (the synthetic set's true
+anomaly rate) the model hits 97% precision and 97% recall. See
+[`docs/results.md`](docs/results.md) for the full sweep and why this is a
+methodology check, not a real-world accuracy claim.
+
 ## Status
 
 Early-stage build. See [`docs/results.md`](docs/results.md) for the
