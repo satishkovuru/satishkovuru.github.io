@@ -4,20 +4,20 @@ const LIVE = 'https://satishkovuru.github.io/projects';
 
 export const projects = [
   {
+    title: 'PipelineSentinel — CI/CD Anomaly Detection',
+    meta: 'Independent research project — original design, build & validation',
+    description:
+      'A lightweight anomaly-detection layer for CI/CD pipelines, designed and built end to end: pulls run metadata from the GitHub Actions API, scores runs with an IsolationForest over duration, failure rate, and retries, and surfaces flagged runs with the reason in a Streamlit dashboard. Validated against a labeled synthetic dataset (97% precision / 97% recall) and a real pipeline smoke test, with methodology and results documented in the repo.',
+    tags: ['Anomaly Detection', 'scikit-learn', 'Isolation Forest', 'Streamlit', 'CI/CD', 'Original Research'],
+    link: `${REPO}/pipeline-sentinel`,
+    linkLabel: 'View Source',
+  },
+  {
     title: 'Portfolio Website',
     description:
       'This site — a React + Vite portfolio built to present my background, skills, and résumé, deployed automatically to GitHub Pages.',
     tags: ['React', 'Vite', 'GitHub Actions'],
     link: 'https://github.com/SatishKovuru/satishkovuru.github.io',
-    linkLabel: 'View Source',
-  },
-  {
-    title: 'PipelineSentinel — CI/CD Anomaly Detection',
-    meta: 'Independent project — in progress',
-    description:
-      'A lightweight anomaly-detection layer for CI/CD pipelines: pulls run metadata from the GitHub Actions API, scores runs with an IsolationForest over duration, failure rate, and retries, and surfaces flagged runs with the reason in a Streamlit dashboard — built to cut manual pipeline triage time.',
-    tags: ['Anomaly Detection', 'scikit-learn', 'Isolation Forest', 'Streamlit', 'CI/CD'],
-    link: `${REPO}/pipeline-sentinel`,
     linkLabel: 'View Source',
   },
   {
