@@ -7,7 +7,7 @@ export default function Projects() {
       <SectionHeading
         eyebrow="Projects"
         title="Things I've built"
-        subtitle="A few selected projects — edit src/data/projects.js to add your own."
+        subtitle="Independent research projects, alongside applied coursework in AI/ML — edit src/data/projects.js to add your own."
       />
       <div className="project-grid">
         {projects.map((project) => (
