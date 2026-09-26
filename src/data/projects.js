@@ -9,6 +9,8 @@ export const projects = [
     description:
       'A lightweight anomaly-detection layer for CI/CD pipelines, designed and built end to end: pulls run metadata from the GitHub Actions API, scores runs with an IsolationForest over duration, failure rate, and retries, and surfaces flagged runs with the reason in a Streamlit dashboard. Validated against a labeled synthetic dataset (97% precision / 97% recall) and a real pipeline smoke test, with methodology and results documented in the repo.',
     tags: ['Anomaly Detection', 'scikit-learn', 'Isolation Forest', 'Streamlit', 'CI/CD', 'Original Research'],
+    demoLink: '/articles/detecting-anomalies-cicd',
+    demoLabel: 'Read Article',
     link: `${REPO}/pipeline-sentinel`,
     linkLabel: 'View Source',
   },
